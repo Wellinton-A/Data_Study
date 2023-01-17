@@ -3,7 +3,7 @@ import random
 list1 = [26, 73, 55, 88, 10, 10, 3, 4, 4,14,14,14,28,39,40,40,1,2] 
 # 5, 42, 51, 27, 71, 66, 45, 8, 26, 21, 56, 92, 36, 91, 91, 63, 14, 31, 61, 1, 98, 54, 25, 33, 3, 24, 75, 95, 61, 61, 52, 19, 99, 13, 9, 40, 59, 86, 64, 99, 99, 17, 69, 68, 72, 39, 16, 60, 30, 94]
 print(list1)
-sum2 = 3
+sum2 = 14
 # def pair_sum(li, sum1):
 #     k = 0
 #     j = len(li)-1
@@ -51,3 +51,4 @@ def arrays_contain_dict(arr1, arr2): #O(n+m) time complexity
 
 print(arrays_contain_dict(array1, array2))
 print(arrays_contain_dict(array1, array3))
+print(arrays_contain_dict(array2, array3))
