@@ -37,17 +37,20 @@ dict1 = {
 }
 
 
-list10 = [2,5,1,2,3,5,1,2,4]
+list10 = [2,5,1,8,3,10,11,9,2]
 list20 = [2,1,1,2,3,5,1,2,4]
 list30 = [2,3,4,5]
 
 def first_recurring_character2(li: list):
-    n = 1
+    repeat = len(li)
     for i in range(len(li)):
-        for j in range(n, len(li)):
+        for j in range(i+1, len(li)):
             if li[i] == li[j]:
-                return li[i]
-        n += 1
+                if j < repeat:
+                    repeat = j
+    if repeat == len(li):
+        return None
+    return li[repeat]  
 
 def first_recurring_character(li: list):
     dict = {}

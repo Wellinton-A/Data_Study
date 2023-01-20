@@ -22,7 +22,6 @@ sum2 = 14
 def pair_sum_unsorted(li, sum1):
     comp = set()
     for i in range(len(li)):
-        print(comp)
         if li[i] not in comp:
             comp.add(sum1 - li[i])
         else:
