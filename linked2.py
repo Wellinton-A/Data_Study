@@ -29,7 +29,7 @@ class LinkedList:
             current_node = current_node.next
     
     def print_tail(self):
-        current_tail = self.tail
+        current_tail = self.tail.value
         print(current_tail)
 
 myLink = LinkedList(10)

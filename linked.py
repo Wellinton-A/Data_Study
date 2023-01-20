@@ -1,8 +1,3 @@
-class Node:
-    def __init__(self, value):
-        self.value: None
-        self.next: None
-
 class LinkedList:
     def __init__(self, value):
         self.head = {
@@ -29,8 +24,8 @@ class LinkedList:
         self.head = newNode
         self.length += 1
     
-    # def __repr__(self):
-    #     return f"head = {self.head}\ntail = {self.tail}\nlength = {self.length}"
+    def __repr__(self):
+        return f"head = {self.head}\ntail = {self.tail}\nlength = {self.length}"
 
 
 Mylink = LinkedList(10)
@@ -42,7 +37,7 @@ print(Mylink)
 Mylink.prepend(52)
 print(Mylink)
 
-list1 =list(range(1000))
+list1 =list(range(100))
 
 for i in list1:
     Mylink.append(i)

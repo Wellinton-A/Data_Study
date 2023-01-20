@@ -8,7 +8,7 @@ text1 = "This code uses a defaultdict(int), which is a subclass of the built-in 
 
 print(reverse_string(text1))
 
-def letter_count2(text: str):
+def letter_count2(text: str,):
     word_list = []
     for i in text:
         if i != ' ':
