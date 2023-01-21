@@ -61,11 +61,6 @@ class LinkedList:
             list_linked.append(current_node.value)
             current_node = current_node.next
         return print(list_linked)
-    
-    def print_tail(self):
-        current_tail = self.tail.next
-        print(current_tail)
-
 myLink = LinkedList(10)
 myLink.append(25)
 myLink.append(52)
@@ -73,7 +68,7 @@ myLink.prepend(15)
 myLink.prepend(14)
 myLink.prepend(13)
 
-
+print(myLink.transverse(0).next.value)
 myLink.print_list()
 # print(myLink.length)
 # myLink.print_tail()
