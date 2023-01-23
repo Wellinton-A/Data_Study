@@ -61,6 +61,7 @@ class LinkedList:
             list_linked.append(current_node.value)
             current_node = current_node.next
         return print(list_linked)
+
 myLink = LinkedList(10)
 myLink.append(25)
 myLink.append(52)

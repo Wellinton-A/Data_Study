@@ -66,6 +66,30 @@ class LinkedList:
         follower.previous = leader
         self.length -= 1
         
+    # def reverse(self):
+    #     if self.length <= 1:
+    #         return
+    #     i = self.length
+    #     while i >= 0:
+    #         self.insert(self.head.value, i)
+    #         self.head.next.previous = None
+    #         self.head = self.head.next
+    #         self.length -= 1
+    #         i -= 1
+
+    def reverse(self):
+        if self.length <= 1:
+            return
+        fisrt = self.head
+        self.tail = self.head
+        second = fisrt.next
+        while second:
+            temp = second.next
+            second.next = fisrt
+            fisrt = second
+            second = temp
+        self.head.next = None
+        self.head = fisrt
 
     def print_list(self):
         list_nodes = []
@@ -83,12 +107,16 @@ myLink.prepend(2)
 myLink.prepend(1)
 myLink.insert(8, 3)
 
-list1 = list(range(6,11))
+list1 = list(range(6,10))
 for i in range(len(list1)):
     myLink.append(list1[i])
 myLink.remove(3)
+myLink.reverse()
+myLink.reverse()
 
-print(myLink.tail.value)
+
+
 myLink.print_list()
+# print(myLink.transverse(9).previous.value)
 # print(myLink.)
 
