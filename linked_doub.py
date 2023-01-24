@@ -115,8 +115,8 @@ myLink.reverse()
 myLink.reverse()
 
 
-
 myLink.print_list()
+print(myLink.head.previous)
 # print(myLink.transverse(9).previous.value)
 # print(myLink.)
 
