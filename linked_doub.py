@@ -66,7 +66,7 @@ class LinkedList:
         follower.previous = leader
         self.length -= 1
         
-    # def reverse(self):
+    # def reverse(self):                # Quadratic solution
     #     if self.length <= 1:
     #         return
     #     i = self.length

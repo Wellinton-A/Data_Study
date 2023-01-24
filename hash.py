@@ -6,16 +6,29 @@ class HashTable:
         self.values = [None] * size
 
     def hash_function(self, key):
-        if type(key) == str:
-            hash_n = ord(key[len(key) % 2]) % self.size
-        if type(key) == int:
-            hash_n = ord(key[len(key) % 2]) % self.size
-            
-        if type(key) == float:
-            print(10.5)
+        hash = 0
+        for i in range(len(key)):
+            hash = (hash + ord(key[i]) % ord(key[2])) * i % self.size
+        return hash
     
+    def add(self, key, value):
+        address = self.hash_function(key)
+        if self.keys[address] == None:
+            self.keys[address] = key
+            self.values[address] = value
+
+    def get(self, key):
+        address = self.hash_function(key)
+        return self.values[address] 
     
 
-hash1 = HashTable(20)
+hash1 = HashTable(85)
 
-hash1.hash_function()
+hash1.add('First', 1)
+hash1.add('Second', 2)
+hash1.add('Third', 3)
+hash1.add('Forth', 4)
+
+print(hash1.get('Forth'))
+
+
