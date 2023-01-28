@@ -54,6 +54,6 @@ myBinaryST.insert(155)
 myBinaryST.insert(45)
 myBinaryST.insert(2)
 print_tree(myBinaryST.root)
-print(myBinaryST.lookup(10))
+print(myBinaryST.lookup(45))
 
 

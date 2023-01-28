@@ -54,10 +54,12 @@ hash1.add('Nineth', 9)
 hash1.add('Tenth', 10)
 hash1.add('Eleventh', 11)
 hash1.add(1, True)
+hash1.add(8, True)
+hash1.add(20, True)
 
 print(hash1.keys)
 print(hash1.values)
-print(hash1.get(1))
+print(hash1.get(8))
 
 
 
