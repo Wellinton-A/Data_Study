@@ -1,6 +1,6 @@
 import random
 
-numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0]
+numbers = [99, 44, 6, 2, 0, 1, 5, 63, 5, 87, 283, 4, 0]
 
 numbers2 = random.sample(range(-100,100),58)
 
@@ -17,6 +17,6 @@ def selectionSort(list):
         list[index] = aux
         
                 
-selectionSort(numbers2)
+selectionSort(numbers)
 
-print(numbers2)
+print(numbers)
