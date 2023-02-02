@@ -20,3 +20,10 @@ def selectionSort(list):
 selectionSort(numbers)
 
 print(numbers)
+
+
+
+print(next(filter(lambda x: x == 100, numbers), False))
+
+print(*filter(lambda x: x % 2 == 1, numbers))
+
