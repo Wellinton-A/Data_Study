@@ -63,6 +63,39 @@ class BinarySearchTree:
             queue.append(current.right)
         return self.breadthFirstSearchR(queue, list)
 
+    def DFSinOrder(self):
+        return TraverseInOrder(self.root, [])
+    
+    def DFSPreOrder(self):
+        return TraversePreOrder(self.root, [])
+
+    def DFSPostOrder(self):
+        return TraversePostOrder(self.root, [])
+
+def TraverseInOrder(node, list):
+    if node.left:
+        TraverseInOrder(node.left, list)
+    list.append(node.value)
+    if node.right:
+        TraverseInOrder(node.right, list)
+    return list
+
+def TraversePreOrder(node, list):
+    list.append(node.value)
+    if node.left:
+        TraversePreOrder(node.left, list)
+    if node.right:
+        TraversePreOrder(node.right, list)
+    return list
+
+def TraversePostOrder(node, list):
+    if node.left:
+        TraversePostOrder(node.left, list)
+    if node.right:
+        TraversePostOrder(node.right, list)
+    list.append(node.value)
+    return list
+
 def print_tree(root):
     if root:
         print(root.value)
@@ -80,7 +113,9 @@ myBinaryST.insert(45)
 myBinaryST.insert(2)
 myBinaryST.insert(200)
 print(myBinaryST.breadthFirstSearchR([myBinaryST.root], []))
-# print_tree(myBinaryST.root)
+print(myBinaryST.DFSinOrder())
+print(myBinaryST.DFSPreOrder())
+print(myBinaryST.DFSPostOrder())
 # print(myBinaryST.lookup(45))
 
 
