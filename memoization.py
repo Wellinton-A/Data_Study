@@ -40,20 +40,17 @@ def fibonacciIter(n):
 print(fibonacciIter(50))
 
 calculations2 = 0
-def fibonacciCache(n):
-    cache = dict()
-    def fib(n):
-        global calculations2
-        calculations2 += 1
-        if n in cache:
-            return cache[n]
+def fibonacciCache(n, cache = {}):
+    global calculations2
+    calculations2 += 1
+    if n in cache:
+        return cache[n]
+    else:
+        if n < 2 :
+            return n
         else:
-            if n < 2 :
-                return n
-            else:
-                cache[n] = fib(n-1) + fib(n-2)
-                return cache[n]
-    return fib(n)
+            cache[n] = fibonacciCache(n-1) + fibonacciCache(n-2)
+            return cache[n]
 
-print(fibonacciCache(150))
+print(fibonacciCache(500))
 print(f'we did: {calculations2} calculations')
