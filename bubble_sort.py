@@ -16,5 +16,5 @@ def bubbleSort(list):
 # bubbleSort(numbers)
 bubbleSort(numbers2)
 
-
+print(len(numbers2))
 print(numbers2)

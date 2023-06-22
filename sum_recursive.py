@@ -4,3 +4,4 @@ def sumNatural(int):
     return sumNatural(int-1) + int
 
 print(sumNatural(14))
+

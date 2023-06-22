@@ -27,13 +27,11 @@ def binarySearchLoops(list, n):
     while lower <= greater:
         mid = (lower + greater) // 2
         if list[mid] == n:
-            return list[mid]
+            return True
         elif list[mid] > n:
             greater = mid - 1
         else:
             lower = mid +1
     return False
 
-print(binarySearchLoops(numbers, 105))
-    
-    
+print(binarySearchLoops(numbers, 44))

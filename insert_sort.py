@@ -15,3 +15,15 @@ def insertionSort(list):
 
 insertionSort(numbers2)
 print(numbers2)
+
+
+99, 44
+44, 99
+
+
+def insertionSort2(list):
+    for i in range(len(list)-1):
+        if list[i+1] < list[i]:
+            for j in range(0, i+1):
+                if list[i+1] < list[j]:
+                    list[i+1], list[j] = list[j], list[i+1]
